@@ -5,24 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Responsive Grid Layout</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evSX huddled7su3YrYtEC9zvEuPkWylHvP0IwEtgQzP8178iZWDgZKCmgtzSJnQCrIhNchx8=" crossorigin="anonymous">
-  
+  <style>
+    .container {
+      width: 600px;
+      border: 5px solid green;
+      background-color: black;
+    }
+    .row {
+      border: 5px solid gold;
+      height: 200px;
+    }
+    .col {
+      border: 2px dotted darkgray;
+    }
+    .row1-col1 {
+      background-color: teal;
+    }
+    .row1-col2 {
+      background-color: thistle;
+    }
+    .row2-col1 {
+      background-color: tomato;
+    }
+    .row2-col2 {
+      background-color: turquoise;
+    }
+    .row3-col1 {
+      background-color: violet;
+    }
+    .row3-col2 {
+      background-color: yellowgreen;
+    }
+    .row-3 {
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .row-1 .col,
+      .row-3 .col {
+        background-color: unset;
+      }
+      .row-3 {
+        text-align: unset;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <div class="row row-1">
-      <div class="col col-1">Row1 col 1</div>
-      <div class="col col-2">Row1 col2</div>
+      <div class="col-md-6 row1-col1">Row1 col 1</div>
+      <div class="col-md-6 row1-col2">Row1 col2</div>
     </div>
 
     <div class="row row-2">
-      <div class="col col-1 offset-2">Row2 col1</div>
-      <div class="col col-2">Row2 col2</div>
+      <div class="col-md-4 row2-col1">Row2 col1</div>
+            <div class="col-md-4 row2-col2">Row2 col2</div>
     </div>
 
     <div class="row row-3">
-      <div class="col col-1">Row3 col1</div>
-      <div class="col col-2">Row3 col2</div>
-    </div>
+      <div class="col-md-4 row3-col1">Row3 col1</div>
+      <div class="col-md-4 row3-col2">Row3 col2</div>
+          </div>
   </div>
 </body>
 </html>
